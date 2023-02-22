@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Automatic Approve
         uses: mheap/automatic-approve-action@v1
+        environment:
+          name: test
         with:
           token: ${{ secrets.PAT || || github.token}}
           workflows: "action.yml"
