@@ -1,14 +1,14 @@
-name: Automatic Approve
-on: pull_request_target
+name: Pull request labeler
+on: [ pull_request_target ]
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
-  automatic-approve:
-    name: Automatic Approve
+  triage:
     runs-on: ubuntu-latest
     steps:
-      - name: Automatic Approve
-        uses: hmarr/auto-approve-action@v3
+      - uses: actions/labeler@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          workflows: "action.yml"
-          dangerous_files: "mainTest.cpp"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
