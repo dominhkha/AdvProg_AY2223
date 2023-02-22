@@ -5,6 +5,8 @@ jobs:
   automatic-approve:
     name: Automatic Approve
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Automatic Approve
         uses: mheap/automatic-approve-action@v1
