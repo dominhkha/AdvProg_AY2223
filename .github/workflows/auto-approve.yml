@@ -11,6 +11,6 @@ jobs:
       - name: Automatic Approve
         uses: hmarr/auto-approve-action@v3
         with:
-          token: ${{ secrets.PAT || github.token}}
+          token: ${{ secrets.PAT || github.token || secrets.GITHUB_TOKEN}}
           workflows: "action.yml"
           dangerous_files: "mainTest.cpp"
