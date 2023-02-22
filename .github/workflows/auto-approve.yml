@@ -9,6 +9,6 @@ jobs:
       - name: Automatic Approve
         uses: mheap/automatic-approve-action@v1
         with:
-          token: ${{ secrets.UBERSHMEKEL_ALT_TOKEN }}
+          token: ${{ secrets.MY_TOKEN || github.token }}
           workflows: "action.yml"
           dangerous_files: "mainTest.cpp"
