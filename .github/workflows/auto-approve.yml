@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Automatic Approve
-        uses: mheap/automatic-approve-action@v3
+        uses: hmarr/auto-approve-action@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           workflows: "action.yml"
