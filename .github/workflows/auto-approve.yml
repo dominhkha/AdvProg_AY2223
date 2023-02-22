@@ -12,3 +12,5 @@ jobs:
       - uses: hmarr/auto-approve-action@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.GH_PERSONAL_TOKEN }}
